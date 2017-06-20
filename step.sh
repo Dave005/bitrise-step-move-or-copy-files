@@ -35,11 +35,11 @@ else
 fi
 
 if [ "$?" -ne "0" ]; then
-  echo "Submission failed"
+  echo "${move_action} failed"
   exit 1
 fi
 
-echo "Submission successful."
+echo "${move_action} successful."
 
 
 
