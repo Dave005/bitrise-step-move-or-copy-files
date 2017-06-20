@@ -1,9 +1,6 @@
 #!/bin/bash
 set -e
 
-
-
-
 # Required parameters
 if [ -z "${input_file}" ] ; then
   echo " [!] Missing required input: input_file"
@@ -18,10 +15,6 @@ fi
 if [ -z "${output_file}" ] ; then
   echo " [!] Missing required input: output_file"
   exit 1
-fi
-
-if [ -z "${move_action}" ] ; then
-    move_action = "false"
 fi
 
 echo "This is the value specified for the input 'input_file': ${input_file}"
