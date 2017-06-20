@@ -28,7 +28,7 @@ echo "This is the value specified for the input 'input_file': ${input_file}"
 echo "This is the value specified for the input 'output_file': ${output_file}"
 echo "This is the value specified for the input 'move_action': ${move_action}"
 
-if [ "${move_action}" = "true" ] ; then
+if [ "${move_action}" = "move" ] ; then
     mv ${input_file} ${output_file}
 else
     cp ${input_file} ${output_file}

@@ -12,10 +12,10 @@ title: |-
 summary: |
   Moves or copies files
 description: |
-  -
-website: https://github.com/...
-source_code_url: https://github.com/...
-support_url: https://github.com/.../issues
+  This Step copies or moves a single file to the desired target location. It can also be used to rename files.
+website: https://www.datenstrom.online
+source_code_url: https://github.com/Dave005/bitrise-step-move-or-copy-files
+support_url: https://github.com/Dave005/bitrise-step-move-or-copy-files/issues
 host_os_tags:
   - osx-10.10
   - ubuntu-16.04
@@ -49,14 +49,6 @@ is_always_run: false
 is_skippable: false
 run_if: ""
 
-deps:
-  brew:
-  - name: git
-  - name: wget
-  apt_get:
-  - name: git
-  - name: wget
-
 toolkit:
   bash:
     entry_file: step.sh
@@ -76,16 +68,16 @@ inputs:
       description: |
         Path to the target file
       is_required: true
-  - move_action: false
+  - move_action: "copy"
     opts:
       title: "Enable Move"
       summary: ""
       description: |
-        If this is true, the source file will be moved instead of copied, can also be used to rename files
+        Choose between a 'move' or 'copy' action -- standard is copy
       is_required: false
       value_options:
-      - "true"
-      - "false"            
+      - "move"
+      - "copy"            
 
 outputs:
 

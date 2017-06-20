@@ -41,7 +41,7 @@ workflows:
         inputs:
         - input_file: ./testfile.txt
         - output_file: ./testfile_copied.txt
-        - move_action: "false"
+        - move_action: "copy"
 
 
   # ----------------------------------------------------------------
