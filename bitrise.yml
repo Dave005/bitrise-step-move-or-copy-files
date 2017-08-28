@@ -73,7 +73,7 @@ workflows:
         run_if: true
         inputs:
         - input_file: ./testFolder
-        - output_file: ./testFolder_copied
+        - output_file: ./nestedFolder/nestedFolder2/testFolder_copied
         - move_action: "copy"
 
   # ----------------------------------------------------------------

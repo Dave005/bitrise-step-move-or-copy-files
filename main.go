@@ -6,6 +6,7 @@ import (
 	"io"
 	"log"
 	"os"
+	"path/filepath"
 )
 
 type ConfigsModel struct {
@@ -53,6 +54,14 @@ func copyFile(source string, dest string) (err error) {
 	}
 
 	defer sourcefile.Close()
+
+	containingDir := filepath.Dir(dest)
+
+	err = os.MkdirAll(containingDir, os.ModePerm)
+
+	if err != nil {
+		return err
+	}
 
 	destfile, err := os.Create(dest)
 	if err != nil {
